@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Toca</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      background: #000;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .btn {
+      background: #fff;
+      color: #000;
+      border: none;
+      padding: 18px 36px;
+      font-size: 24px;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+      transition: transform 120ms ease, box-shadow 120ms ease;
+      user-select: none;
+    }
+
+    .btn:active { transform: translateY(2px) scale(0.995); }
+    .btn:focus { outline: 3px solid rgba(255,255,255,0.15); }
+
+    .message {
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #fff;
+      font-size: 18px;
+      background: rgba(255,255,255,0.06);
+      padding: 10px 14px;
+      border-radius: 10px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="message" id="message"> </div>
+  <button class="btn" id="tocaBtn" aria-label="Toca">toca</button>
+
+  <script>
+    const btn = document.getElementById('tocaBtn');
+    const msg = document.getElementById('message');
+
+    btn.addEventListener('click', () => {
+      // Mostrar mensaje en pantalla
+      msg.textContent = 'mariano puto';
+      msg.style.display = 'block';
+
+      // También mostrar una alerta para asegurarse que se vea
+      alert('mariano puto');
+    });
+  </script>
+</body>
+</html>
